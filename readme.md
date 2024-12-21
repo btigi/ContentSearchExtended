@@ -48,7 +48,7 @@ Note the `e`, `d`, `s` and `q` commands all implicitly clear the previous search
 
 ## Configuration
 
-cse will read configuration values from cs.json if the file exists. The default file content is below
+cse will read configuration values from cse.json if the file exists. The default file content is below
 cse.json
 ```
 {
@@ -69,4 +69,4 @@ The configuration sets colouring options in the output. Colours are .NET colour 
 
 ## Licencing
 
-Content Search is licenced under CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/ Full licence details are available in licence.md
+Content Search Extended is licenced under CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/ Full licence details are available in licence.md

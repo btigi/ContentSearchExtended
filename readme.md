@@ -26,12 +26,19 @@ $ dotnet build
 ```cse```
 
 cse will indicate the current search directory (defauling to the current working directory) and the current file type extension (defauling to *), then await input. Supported inputs are:
+
 `e` or `ext` e.g. `e txt` - set the file type extension to search
+
 `d` or `dir` e.g. `d C:\dev` - set the directory to search (automatically includes all sub-directories)
+
 `s` or `search` e.g. `s EmployeeDto` - run a case-insensitive search for the specified text
+
 `f` or `filter` e.g. `f POST` - run a case-insensitive search for the specified text only in the files returned by the previous search
+
 `sf` or `show` - show a list of the filters that have been used on the current search results
+
 `r` or `reset` - clears the previous search results
+
 `q` - exit the application
 
 Note the `e`, `d`, `s` and `q` commands all implicitly clear the previous search results.

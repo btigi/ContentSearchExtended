@@ -33,6 +33,9 @@ var errorBackgroundConsoleColour = FromColour(errorBackgroundColour);
 var errorForegroundColour = Color.FromName(config["ErrorForegroundColour"] ?? "Red");
 var errorForegroundConsoleColour = FromColour(errorForegroundColour);
 
+var existingBackgroundColour = Console.BackgroundColor;
+var existingForegroundColour = Console.ForegroundColor;
+
 var searchDirectory = Directory.GetCurrentDirectory();
 var extension = "*";
 var searchText = "";
@@ -168,6 +171,9 @@ do
     }
 
 } while (input != "q");
+
+Console.BackgroundColor = existingBackgroundColour;
+Console.ForegroundColor = existingForegroundColour;
 
 static void ShowError(string message, ConsoleColor errorBackgroundConsoleColour, ConsoleColor errorForegroundConsoleColour, ConsoleColor defaultBackgroundConsoleColour, ConsoleColor defaultForegroundConsoleColour)
 {

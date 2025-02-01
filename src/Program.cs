@@ -197,7 +197,9 @@ static IEnumerable<(string file, int lineNumber, string content)> SearchContentL
 
     Parallel.ForEach(fileToSearchIn, (file) =>
     {
-        var fileContent = File.ReadLines(file);
+        using var fileStream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        using var textReader = new StreamReader(fileStream);
+        var fileContent = textReader.ReadToEnd().Split("\n");
 
         var fileContentResult = fileContent.Select((line, i) => new { line, i })
               .Where(x => x.line.Contains(searchText, StringComparison.CurrentCultureIgnoreCase))
